@@ -17,10 +17,10 @@ where each edge exists with prob. $p$.
 \[ \mathbb P[k \textrm{ non-neighbors before next-neighbor}] = p(1-p)^k \]
 \vspace{-3.5ex}
 \begin{itemize}
-    \item Can sample from this distribution in $\tilde{\mathcal O}(1)$ time [cite].
-    \item Avoid sampling each $0$ separately.
-    \item [] \textbf{Issue:} Adjacency matrix is symmetric.
-          So, each zero must also appear in the corresponding column of $v$.
+    \item Can sample from this distribution in $\tilde{\mathcal O}(1)$ time [ELMR17]
+    \item Avoid sampling each $0$ separately
+    \item [] \textbf{Issue:} Adjacency matrix is symmetric
+          So, each zero must also appear in the corresponding column of $v$
 \end{itemize}
 
 \begin{figure}[h!]\centering

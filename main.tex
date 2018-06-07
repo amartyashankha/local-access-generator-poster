@@ -14,8 +14,6 @@
 
 \usepackage{graphicx, import}  % Required for including images
 
-\usepackage{booktabs} % Top and bottom rules for tables
-
 \usetheme{confposter} % Use the confposter theme supplied with this template
 
 \setbeamercolor{block title}{fg=ngreen,bg=white} % Colors of the block titles
@@ -61,6 +59,7 @@
 %----------------------------------------------------------------------------------------
 
 \begin{document}
+
 
 \addtobeamertemplate{block end}{}{\vspace*{2ex}} % White space under blocks
 \addtobeamertemplate{block alerted end}{}{\vspace*{2ex}} % White space under highlighted (alert) blocks
@@ -118,6 +117,24 @@
 
 
 
+\begin{column}{\twocolwid}
+
+\let\thefootnote\relax\footnotetext{
+    [ELMR17] Guy Even, Reut Levi, Moti Medina, and Adi Rosen.
+    Sublinear random access generators for preferential attachment graphs.
+}
+\let\thefootnote\relax\footnotetext{
+    [GGN10] Oded Goldreich, Shafi Goldwasser, and Asaf Nussboim.
+    On the implementation of huge random objects.
+}
+
+\end{column}
+
+
+
 \end{frame} % End of the enclosing frame
+
+
+
 
 \end{document}
