@@ -9,6 +9,7 @@
 \usepackage{relsize}
 \usepackage{lmodern}
 \usepackage{exscale}
+\usepackage{anyfontsize}
 %\usepackage{parskip}
 
 \usepackage{graphicx, import}  % Required for including images
@@ -43,7 +44,7 @@
 
 
 \renewcommand{\baselinestretch}{1.05}
-\setbeamertemplate{itemize item}{$\rhd$}
+\setbeamertemplate{itemize item}{$\scriptstyle\blacktriangleright$}
 %-----------------------------------------------------------
 
 
@@ -76,8 +77,8 @@
 
 \begin{column}{\onecolwid} % The first column
 
+\setbeamercolor{block title}{fg=Mahogany,bg=white} % Change the block title color
 \input{partial_sampling.tex}
-
 \input{toy_example.tex}
 
 \end{column} % End of the first column
@@ -88,34 +89,34 @@
 
 \begin{column}{\twocolwid} % Begin a column which is two columns wide (column 2)
 
+
+\setbeamercolor{block title}{fg=Mahogany,bg=white} % Change the block title color
 \input{bucket.tex}
+\input{sbm.tex}
 
 
 \end{column} % End of the second column
 
 
+
 \begin{column}{\sepwid}\end{column} % Empty spacer column
+
 
 
 \begin{column}{\onecolwid} % The third column
 
-\input{domino.tex}
-\setbeamercolor{block title}{fg=red,bg=white} % Change the block title color
 
-\begin{block}{Glossary}
+\setbeamercolor{block title}{fg=Mahogany,bg=white} % Change the block title color
+\input{wip.tex}
 
-\end{block}
-
-\setbeamercolor{block alerted title}{fg=black,bg=norange} % Change the alert block title colors
-%\setbeamercolor{block alerted body}{fg=black,bg=white} % Change the alert block body colors
-
-\begin{alertblock}{Some Necessary and Useful Vocabulary}
-
-\end{alertblock}
 
 \end{column} % End of the third column
 
+
 \end{columns} % End of all the columns in the poster
+
+
+
 
 \end{frame} % End of the enclosing frame
 

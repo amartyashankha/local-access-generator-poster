@@ -52,38 +52,3 @@ So, the number of rejection sampling rounds is $\mathcal O(\log^2 N)$ in expecta
 %\end{column}
 
 %\end{columns}
-
-
-
-\begin{block}{Stochastic Block Model}%: Random Community Assignment}
-
-\begin{itemize}
-    \item Each vertex is assigned to some community $C_i\subseteq V$ for $i\in [r]$
-    \item Communities $\{C_i\}_{i\in [r]}$ partition $V$:
-          if $u\in C_i, v\in C_j$, then $\mathbb P_{(u, v)\in E} = p_{ij}$
-    %where $\left\{ p_{ij}\right\}_{i,j\in [r]}\in [0,1]^{r\times r}$
-\end{itemize}
-\begin{itemize}
-\item [] \textbf{Given sizes of each comunity $C_i$ and a range of length $\ell$}
-    \item Count number of occurrences of each community in any contiguous range%: $|[a,b]\cap C_j|$
-    \item Sample from \emph{Multivariate Hypergeometric Distribution}%: $O(r\, poly(\log n))$ resources
-\[
-\Pr[\mathbf{S}^\mathbf{C}_\ell = \langle s_1, \ldots, s_r \rangle]
-= \frac{\binom{C_1}{s_1}\cdot\binom{C_2}{s_2}\cdots\binom{C_r}{s_r}}{\binom{B}{\ell}}
-\hspace{2ex}\textrm{ where } \ell = \mathlarger{\sum}^{r}_{i=1} s_i
-\textrm{ and } B = \mathlarger{\sum}^{r}_{i=1} C_i
-\]
-\end{itemize}
-
-
-\setbeamercolor{block alerted title}{bg=CadetBlue} % Change the alert block title colors
-\begin{alertblock}{Multivariate Hypergeometric Distribution}
-[cite] solves the special case of $r=2$ and $B = 2\ell$.
-\begin{itemize}
-    \item \textbf{Extending to $B\not= 2\ell$}: Divide $\ell$ into $\mathcal O(\log n)$ dyadic segments.
-    \item \textbf{Extending to $r>2$}: Make a tree with $r$ leaves (one for each $C_i$).
-          Every branch down the tree is equivalent to a $r=2$ splitting.
-\end{itemize}
-\end{alertblock}
-
-\end{block}

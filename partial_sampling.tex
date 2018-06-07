@@ -1,6 +1,7 @@
 \begin{block}{Partial Sampling from a Distribution}
 
 
+
 \setbeamercolor{block alerted title}{bg=Emerald} % Change the alert block title colors
 \begin{alertblock}{Full Sampling $R \sim\mathsf D$ in $\mathcal O (T)$ time}
 
@@ -27,17 +28,18 @@ Each partial step should take $\tilde{\mathcal O} (T/N)$ time.
 
 
 \setbeamercolor{block alerted title}{bg=Bittersweet} % Change the alert block title colors
-
 \begin{alertblock}{\textbf{Problem Statement}}
 
 A local-access generator of a random object $R \sim\mathsf D$,
 provides indirect access to $R'$ with a \emph{query oracle} s.t.
 \begin{itemize}
-    \item All query responses are \textbf{consistent} with each other
+    \item All query responses (\emph{partial samples}) are \textbf{consistent}
     \item The \textbf{distribution} of $R'$ is $\epsilon$-close to $\mathsf D$ in $L_1$ distance
 \end{itemize}
 
 \end{alertblock}
+
+
 
 \end{block}
 
