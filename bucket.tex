@@ -1,4 +1,4 @@
-\begin{block}{Bucketing Approach \& \emph{Random-Neighbor} Queries}
+\begin{block}{$\textsc{Bucketing-Generator}$ \& $\textsc{Random-Neighbor}$ Queries}
 
 \begin{itemize}
     %\item [] \textbf{Bounding the number of re-samplings:}
@@ -9,8 +9,7 @@
     \item A \textbf{filled} bucket will contain every possible sampled neighbor
 \end{itemize}
 
-
-\setbeamercolor{block alerted title}{bg=Periwinkle} % Change the alert block title colors
+%\setbeamercolor{block alerted title}{bg=Periwinkle} % Change the alert block title colors
 \begin{alertblock}{Filling the $i^{th}$ bucket $B^v_i$ of vertex $v$}
 \begin{itemize}
     \item Use skip-sampling to produce a \textbf{potential} \emph{next-neighbor} $u$ of $v$ in $B^v_i$
@@ -25,13 +24,19 @@
 
 
 
-\vspace{-0.2in}
+\vspace{-0.5in}
 %\begin{columns}[t,totalwidth=\twocolwid]
 
 %\begin{column}{0.49\twocolwid}
 
-\setbeamercolor{block alerted title}{bg=Periwinkle} % Change the alert block title colors
-\begin{alertblock}{Random-Neighbor($v$)}
+\begin{itemize}
+    \item [] \textbf{Degree Sampling:} Sampling the degree of $v$ seems to be much harder
+    \item Sampling $deg(v)$ conditions the remaining RVs in very non-trivial ways
+    \item However, we can stil sample a random neighbor (with prob. $1/deg(v)$)
+\end{itemize}
+
+%\setbeamercolor{block alerted title}{bg=Periwinkle} % Change the alert block title colors
+\begin{alertblock}{$\textsc{Random-Neighbor}(v)$}
 \begin{itemize}
     \item Choose a random bucket $\mathcal B$ of $v$. If the $\mathcal B$ is \textbf{unfilled}, fill it.
     \item If $k$ neighbors found in $\mathcal B$, start over (reject) with probability $1-k/M$.
