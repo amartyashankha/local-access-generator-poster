@@ -10,6 +10,7 @@
 \end{itemize}
 
 
+\setbeamercolor{block alerted title}{bg=Periwinkle} % Change the alert block title colors
 \begin{alertblock}{Filling the $i^{th}$ bucket $B^v_i$ of vertex $v$}
 \begin{itemize}
     \item Use skip-sampling to produce a \textbf{potential} \emph{next-neighbor} $u$ of $v$ in $B^v_i$
@@ -29,6 +30,7 @@
 
 %\begin{column}{0.49\twocolwid}
 
+\setbeamercolor{block alerted title}{bg=Periwinkle} % Change the alert block title colors
 \begin{alertblock}{Random-Neighbor($v$)}
 \begin{itemize}
     \item Choose a random bucket $\mathcal B$ of $v$. If the $\mathcal B$ is \textbf{unfilled}, fill it.
@@ -74,7 +76,8 @@ So, the number of rejection sampling rounds is $\mathcal O(\log^2 N)$ in expecta
 \end{itemize}
 
 
-\begin{alertblock}{Sampling the Multivariate Hypergeometric Distribution}
+\setbeamercolor{block alerted title}{bg=CadetBlue} % Change the alert block title colors
+\begin{alertblock}{Multivariate Hypergeometric Distribution}
 [cite] solves the special case of $r=2$ and $B = 2\ell$.
 \begin{itemize}
     \item \textbf{Extending to $B\not= 2\ell$}: Divide $\ell$ into $\mathcal O(\log n)$ dyadic segments.
