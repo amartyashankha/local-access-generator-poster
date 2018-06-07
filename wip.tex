@@ -1,0 +1,49 @@
+\begin{block}{Work in Progress}
+
+
+
+\setbeamercolor{block alerted title}{bg=norange} % Change the alert block title colors
+\begin{alertblock}{Domino Tiling}
+A $2\times n$ grid tiled with dominoes: $F_n$ tilings possible.
+\begin{figure}[h!]\centering
+    \def\svgwidth{0.8\columnwidth}
+    \import{svg/}{domino_tiling.pdf_tex}
+\end{figure}
+\textbf{Query:} Domino at position $i$: \emph{vertical} OR \emph{horizontal}?
+\begin{figure}[h!]\centering
+    \def\svgwidth{0.8\columnwidth}
+    \import{svg/}{domino_partial.pdf_tex}
+\end{figure}
+Sufficent to approximate $F_c/F_{c-1}$: Use $\phi$ if $c = \Omega(\log(n))$
+\textbf{Open:} $k\times n$ grid for $k = \omega(1)$ and Dimer model.
+\end{alertblock}
+
+
+\begin{alertblock}{Graph Coloring: Glauber Dynamics}
+Find random $k$-coloring for graph with max degree $\Delta$
+\begin{itemize}
+    \item [] \textbf{Global Algorithm} (for $k > 2\Delta$)
+    \item Sample $\mathcal O(n\log n)$ (vertex, color) pairs:
+          $\left\{ (v_1, c_1), (v_2, c_2), (v_3, c_3), \cdots, (v_r, c_r)\right\}$
+    \item For steps $i\in [1\cdots r]$
+    \begin{itemize}
+        \item If no neighbor of $v_i$  has color $c_i$ set $v_i$'s color to $c_i$.
+        \item Else, do nothing
+    \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item [] \textbf{Local Algorithm} (for $k = \Theta(\Delta\log n)$)
+    \item Given $v$, what is $color(v)$ (in some random coloring)?
+    \item Locally sample occurences of $(v, \star)$ using the \emph{Count Splitting Generator}
+    \item Sample $(w, \star)$ if necessary, where $w$ is neighbor of $v$
+    \item Query tree is bounded for $k = \Theta(\Delta\log n)$
+\end{itemize}
+\end{alertblock}
+
+
+\begin{alertblock}{Dyck Paths}
+\end{alertblock}
+
+
+
+\end{block}
