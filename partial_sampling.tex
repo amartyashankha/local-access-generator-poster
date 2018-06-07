@@ -1,10 +1,10 @@
 \begin{block}{Partial Sampling from a Distribution}
 
 
-\begin{alertblock}{Full Sampling in $\mathcal O (T)$ time}
+\begin{alertblock}{Full Sampling $R \sim\mathsf D$ in $\mathcal O (T)$ time}
 
 \begin{figure}[h!]\centering
-    \def\svgwidth{0.6\columnwidth}
+    \def\svgwidth{0.5\columnwidth}
     \import{svg/}{generic_sampling.pdf_tex}
 \end{figure}
 
@@ -18,9 +18,21 @@ Each partial step should take $\tilde{\mathcal O} (T/N)$ time.
 \end{center}
 
 \begin{figure}[h!]\centering
-    \def\svgwidth{0.9\columnwidth}
+    \def\svgwidth{0.7\columnwidth}
     \import{svg/}{partial_sampling.pdf_tex}
 \end{figure}
+
+\end{alertblock}
+
+
+\begin{alertblock}{Problem Statement}
+
+A local-access generator of a random object $R \sim\mathsf D$,
+provides indirect access to $R'$ with a \emph{query oracle} s.t.
+\begin{itemize}
+    \item All query responses are \textbf{consistent} with each other
+    \item The \textbf{distribution} of $R'$ is $\epsilon$-close to $\mathsf D$ in $L_1$ distance
+\end{itemize}
 
 \end{alertblock}
 

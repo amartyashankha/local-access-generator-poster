@@ -3,12 +3,10 @@
 \textbf{Model:} Undirected graph on $N$ vertices (numbered $\langle 1, 2, 3, \cdots, N\rangle$),
 where each edge exists with prob. $p$.
 
-\textbf{Partial Sample:} Given vertices $u, v$, is $(u,v)\in E$?
 
 \begin{itemize}
+    \item [] \textbf{Query Model:} Given vertices $u, v$, is $(u,v)\in E$?
     \item Just a collection of $\frac{n(n-1)}{2}$ Bernoulli RVs with bias $p$.
-    \item Given $u, v$, sample a single Bernoulli if neither $(u,v)$ not $(v,u)$ has been sampled yet.
-          Otherwise return the previously sampled value.
 \end{itemize}
 
 \end{block}
@@ -16,13 +14,15 @@ where each edge exists with prob. $p$.
 \begin{block}{Find Next-Neighbor (\emph{skip-sampling})}
 
 \textbf{Adjacency List query:} Return neighbors of $v$ in order.
-$$
-\mathbb P[k \textrm{ non-neighbors before next-neighbor}] = (1-p)^k\cdot p
-$$
-We can sample from this distribution in $\tilde{\mathcal O}(1)$ time [cite].
-Essentially, we avoid sampling each $0$ separately.
+\[ \mathbb P[k \textrm{ non-neighbors before next-neighbor}] = p(1-p)^k \]
+\vspace{-3.5ex}
+\begin{itemize}
+    \item Can sample from this distribution in $\tilde{\mathcal O}(1)$ time [cite].
+    \item Avoid sampling each $0$ separately.
+    \item [] \textbf{Issue:} Adjacency matrix is symmetric.
+          So, each zero must also appear in the corresponding column of $v$.
+\end{itemize}
 
-\textbf{Issue:} Adjacency matrix is symmetric. So, each zero must also appear in the corresponding column of $v$.
 \begin{figure}[h!]\centering
     \def\svgwidth{1.0\columnwidth}
     \import{svg/}{skip_sampling.pdf_tex}
