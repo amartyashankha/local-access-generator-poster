@@ -10,6 +10,8 @@
 \usepackage{lmodern}
 \usepackage{exscale}
 \usepackage{anyfontsize}
+\usepackage{pdfpages}
+\usepackage{fontspec}
 %\usepackage{parskip}
 
 \usepackage{graphicx, import}  % Required for including images
@@ -31,18 +33,29 @@
 % Set threecolwid to be (3*onecolwid)+2*sepwid = 0.708
 
 \newlength{\sepwid}
-\newlength{\onecolwid}
+\newlength{\leftcolwid}
+\newlength{\rightcolwid}
 \newlength{\twocolwid}
 \setlength{\paperwidth}{48in} % A0 width: 46.8in
 \setlength{\paperheight}{42in} % A0 height: 33.1in
-\setlength{\sepwid}{0.0225\paperwidth} % Separation width (white space) between columns
-\setlength{\onecolwid}{0.28\paperwidth} % Width of one column
-\setlength{\twocolwid}{0.35\paperwidth} % Width of two columns
+\setlength{\sepwid}{0.0175\paperwidth} % Separation width (white space) between columns
+\setlength{\leftcolwid}{0.285\paperwidth} % Width of one column
+\setlength{\twocolwid}{0.36\paperwidth} % Width of two columns
+\setlength{\rightcolwid}{0.285\paperwidth} % Width of one column
 \setlength{\topmargin}{-0.5in} % Reduce the top margin size
 
+\usepackage{xcolor}
+\usepackage{soul}
+
+\newcommand{\hlc}[1]{{%
+    \colorbox{yellow}{#1}}%
+}
 
 \renewcommand{\baselinestretch}{1.05}
 \setbeamertemplate{itemize item}{$\scriptstyle\blacktriangleright$}
+
+%\setmainfont[Ligatures=TeX]{Cambria}
+
 %-----------------------------------------------------------
 
 
@@ -74,7 +87,7 @@
 
 \begin{column}{\sepwid}\end{column} % Empty spacer column
 
-\begin{column}{\onecolwid} % The first column
+\begin{column}{\leftcolwid} % The first column
 
 \setbeamercolor{block title}{fg=Mahogany,bg=white} % Change the block title color
 \input{partial_sampling.tex}
@@ -102,7 +115,24 @@
 
 
 
-\begin{column}{\onecolwid} % The third column
+\begin{column}{\rightcolwid} % The third column
+
+\setbeamercolor{block alerted title}{bg=CadetBlue} % Change the alert block title colors
+\begin{alertblock}{Multivariate Hypergeometric Distribution}
+[GGN10] solves the special case of $r=2$ and $B = 2\ell$.
+\begin{itemize}
+    \item [] $\textsc{Counting-Generator}$
+    \item \textbf{Extending to $B\not= 2\ell$}: Divide $\ell$ into dyadic segments.
+    \item \textbf{Extending to $r>2$}: Make a tree with a leaf for each $C_i$.
+          Every branch in the tree is equivalent to a $2$-splitting.
+\end{itemize}
+\end{alertblock}
+
+\begin{itemize}
+    \item Use $\textsc{Counting-Generator}$ to sample community counts
+    \item Run the $\textsc{Bucketing-Generator}$ as before.
+\end{itemize}
+
 
 
 \setbeamercolor{block title}{fg=Mahogany,bg=white} % Change the block title color
@@ -117,15 +147,22 @@
 
 
 
-\begin{column}{\twocolwid}
+\begin{column}{0.7\paperwidth}
 
 \let\thefootnote\relax\footnotetext{
-    [ELMR17] Guy Even, Reut Levi, Moti Medina, and Adi Rosen.
-    Sublinear random access generators for preferential attachment graphs.
+    \scriptsize{
+        [ELMR17] Guy Even, Reut Levi, Moti Medina, and Adi Rosen.
+        Sublinear random access generators for preferential attachment graphs.
+        In 44th International Colloquium on Automata, Languages, and Programming,
+        ICALP 2017, July 10-14, 2017%, pages 6:1-6:15.
+    }
 }
 \let\thefootnote\relax\footnotetext{
-    [GGN10] Oded Goldreich, Shafi Goldwasser, and Asaf Nussboim.
-    On the implementation of huge random objects.
+    \scriptsize{
+        [GGN10] Oded Goldreich, Shafi Goldwasser, and Asaf Nussboim.
+        On the implementation of huge random objects.
+        SIAM Journal on Computing, 39(7):2761–2822, 2010.
+    }
 }
 
 \end{column}

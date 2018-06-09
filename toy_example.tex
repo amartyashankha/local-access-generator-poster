@@ -1,12 +1,11 @@
 \begin{block}{Trivial Example - Sampling $G(n, p)$}
 
-\textbf{Model:} Undirected graph on $N$ vertices (numbered $\langle 1, 2, 3, \cdots, N\rangle$),
-where each edge exists with prob. $p$.
+\textbf{Model:} $N$ vertex undirected graph: edge probability $p$
 
 
 \begin{itemize}
     \item [] \textbf{Query Model:} Given vertices $u, v$, is $(u,v)\in E$?
-    \item Just a collection of $\frac{n(n-1)}{2}$ Bernoulli RVs with bias $p$.
+    \item Just a collection of $\frac{N(N-1)}{2}$ Bernoulli RVs with bias $p$.
 \end{itemize}
 
 \end{block}
@@ -24,7 +23,7 @@ where each edge exists with prob. $p$.
 \end{itemize}
 
 \begin{figure}[h!]\centering
-    \def\svgwidth{1.0\columnwidth}
+    \def\svgwidth{0.9\columnwidth}
     \import{svg/}{skip_sampling.pdf_tex}
 \end{figure}
 If the sampled neighbor is a $0$, discard and resample.

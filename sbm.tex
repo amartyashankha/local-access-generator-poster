@@ -18,18 +18,10 @@ Communities $\{C_i\}_{i\in [r]}$ partition $V$: If $u\in C_i, v\in C_j$, then $\
 \]
 \end{itemize}
 
+\begin{figure}[h!]\centering
+    \def\svgwidth{0.9\columnwidth}
+    \import{svg/}{counting.pdf_tex}
+\end{figure}
 
-\setbeamercolor{block alerted title}{bg=CadetBlue} % Change the alert block title colors
-\begin{alertblock}{Multivariate Hypergeometric Distribution}
-[GGN10] solves the special case of $r=2$ and $B = 2\ell$.
-\begin{itemize}
-    \item [] $\textsc{Counting-Generator}$
-    \item \textbf{Extending to $B\not= 2\ell$}: Divide $\ell$ into $\mathcal O(\log n)$ dyadic segments.
-    \item \textbf{Extending to $r>2$}: Make a tree with $r$ leaves (one for each $C_i$).
-          Every branch down the tree is equivalent to a $r=2$ splitting.
-\end{itemize}
-\end{alertblock}
 
-The complete generator is implemented by using $\textsc{Counting-Generator}$ to sample the number of
-community members in a range, and then running the $\textsc{Bucketing-Generator}$ as before.
 \end{block}
