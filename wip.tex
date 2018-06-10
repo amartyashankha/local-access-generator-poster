@@ -9,35 +9,37 @@ A $2\times n$ grid tiled with dominoes: $F_n$ tilings possible.
     \def\svgwidth{0.8\columnwidth}
     \import{svg/}{domino_tiling.pdf_tex}
 \end{figure}
-\textbf{Query:} Domino at position $i$: \emph{vertical} OR \emph{horizontal}?
+\textbf{Query:} $i^\textrm{th}$ column configuration: \emph{vertical}, \emph{left}, \emph{right}?
 \begin{figure}[h!]\centering
     \def\svgwidth{0.8\columnwidth}
     \import{svg/}{domino_partial.pdf_tex}
 \end{figure}
 Sufficent to approximate $F_c/F_{c-1}$: Use $\phi$ if $c = \Omega(\log(n))$
-\textbf{Open:} $k\times n$ grid for $k = \omega(1)$ and Dimer model.
+\textbf{Open:} $k\times n$ grid for $k = \omega(1)$ and Dimer model
 \end{alertblock}
 
 
 \begin{alertblock}{Random Coloring: Glauber Dynamics}
-Find random $k$-coloring for graph with max degree $\Delta$
+Consider a \emph{uniform} random coloring of the input graph.
+\textbf{Query:} What is $v$'s color in the random coloring?
+%Find random $k$-coloring for graph with max degree $\Delta$
 \begin{itemize}
-    \item [] \textbf{Global Algorithm} (for $k > 2\Delta$)
+    \item [] \underline{\textbf{Global Algorithm}} (Glauber Dynamics) for $k > 2\Delta$
     \item Sample $r=\mathcal O(n\log n)$ (vertex, color) pairs $\langle(v_i, c_i)\rangle_{i\in[r]}$
 %          $\left\{ (v_1, c_1), (v_2, c_2), (v_3, c_3), \cdots, (v_r, c_r)\right\}$
-    \item For steps $i\in [1\cdots r]$
+    \item For steps $i = 1, \ldots, r$
     \begin{itemize}
-        \item If no neighbor of $v_i$  has color $c_i$ set $v_i$'s color to $c_i$.
+        \item If no neighbor of $v_i$ has color $c_i$, set $v_i$'s color to $c_i$
         \item Else, do nothing
     \end{itemize}
 \end{itemize}
 
 \begin{itemize}
-    \item [] \textbf{Local Algorithm} (for $k = \Theta(\Delta\log n)$)
-    \item Given $v$, what is $color(v)$ (in some random coloring)?
-    \item Locally sample occurences of $(v, \star)$ using the {Bucketing-Generator}
+    \item [] \underline{\textbf{Local Algorithm}} for $k = \Omega(\Delta\log n)$
+%    \item Given $v$, what is $v$'s color (in some random coloring)?
+    \item Locally sample \emph{all} occurences of $(v, \star)$: implemented effenciently with the proposed \textbf{Counting-Generator}
     \item Sample $(w, \star)$ if necessary, where $w$ is neighbor of $v$
-    \item Query tree is bounded for $k = \Theta(\Delta\log n)$
+    \item Query tree is of size $\mathcal{O}(1)$ for $k = \Omega(\Delta\log n)$
 \end{itemize}
 \textbf{Open:} $k = o(\Delta\log n)$
 \end{alertblock}
