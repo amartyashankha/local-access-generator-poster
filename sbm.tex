@@ -1,9 +1,31 @@
 \vspace{-0.3em}
-\begin{block}{Stochastic Block Model}%: Random Community Assignment}
+\begin{block}{Stochastic Block Model (Counting-Generator)} %: Random Community Assignment}
+
+\textbf{Model:} Each $v$ is assigned to a \emph{random} community (color) from $C_1, \ldots, C_r$.
+
+\quad$\Rightarrow$ If $u\in C_i, v\in C_j$, then $\mathbb {P}[{(u, v)\in E}] = p_{ij}$.
+($|C_i|$'s are given as input)
+
+\vspace{15pt}
+
+\colorbox{TealBlue}{\textbf{Idea \#1}} use \#nodes of each color in \emph{any} contiguous range to can generate SBM
+
+\begin{figure}[h]
+    \centering
+\includegraphics[clip, width=0.95\textwidth]{chart.pdf}
+\end{figure}
+
+\colorbox{TealBlue}{\textbf{Idea \#2}} implement a \textbf{Counting-Generator} to answer counting queries
+
+\quad$\Rightarrow$ BBST, split on-the-fly with \emph{Multivariate Hypergeometric Distribution}
+
+
+
+\iffalse{
 
 %\begin{itemize}
     %\item Each vertex is assigned to some community $C_i\subseteq V$ for $i\in [r]$
-Communities $\{C_i\}_{i\in [r]}$ partition $V$: If $u\in C_i, v\in C_j$, then $\mathbb P_{(u, v)\in E} = p_{ij}$.
+%Communities $\{C_i\}_{i\in [r]}$ partition $V$: If $u\in C_i, v\in C_j$, then $\mathbb P_{(u, v)\in E} = p_{ij}$.
     %where $\left\{ p_{ij}\right\}_{i,j\in [r]}\in [0,1]^{r\times r}$
 %\end{itemize}
 \begin{itemize}
@@ -19,8 +41,12 @@ Communities $\{C_i\}_{i\in [r]}$ partition $V$: If $u\in C_i, v\in C_j$, then $\
 \]
 \end{itemize}
 
+\fi
+
+
+\vspace{0.5em}
 \begin{figure}[h!]\centering
-    \def\svgwidth{0.8\columnwidth}
+    \def\svgwidth{0.95\columnwidth}
     \import{svg/}{counting.pdf_tex}
 \end{figure}
 

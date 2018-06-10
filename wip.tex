@@ -3,7 +3,7 @@
 
 
 \setbeamercolor{block alerted title}{bg=norange} % Change the alert block title colors
-\begin{alertblock}{Domino Tiling}
+\begin{alertblock}{Random Domino Tiling}
 A $2\times n$ grid tiled with dominoes: $F_n$ tilings possible.
 \begin{figure}[h!]\centering
     \def\svgwidth{0.8\columnwidth}
@@ -19,25 +19,27 @@ Sufficent to approximate $F_c/F_{c-1}$: Use $\phi$ if $c = \Omega(\log(n))$
 \end{alertblock}
 
 
-\begin{alertblock}{Graph Coloring: Glauber Dynamics}
+\begin{alertblock}{Random Coloring: Glauber Dynamics}
 Find random $k$-coloring for graph with max degree $\Delta$
 \begin{itemize}
     \item [] \textbf{Global Algorithm} (for $k > 2\Delta$)
-    \item Sample $\mathcal O(n\log n)$ (vertex, color) pairs:
-          $\left\{ (v_1, c_1), (v_2, c_2), (v_3, c_3), \cdots, (v_r, c_r)\right\}$
+    \item Sample $r=\mathcal O(n\log n)$ (vertex, color) pairs $\langle(v_i, c_i)\rangle_{i\in[r]}$
+%          $\left\{ (v_1, c_1), (v_2, c_2), (v_3, c_3), \cdots, (v_r, c_r)\right\}$
     \item For steps $i\in [1\cdots r]$
     \begin{itemize}
         \item If no neighbor of $v_i$  has color $c_i$ set $v_i$'s color to $c_i$.
         \item Else, do nothing
     \end{itemize}
 \end{itemize}
+
 \begin{itemize}
     \item [] \textbf{Local Algorithm} (for $k = \Theta(\Delta\log n)$)
     \item Given $v$, what is $color(v)$ (in some random coloring)?
-    \item Locally sample occurences of $(v, \star)$ using the \emph{Count Splitting Generator}
+    \item Locally sample occurences of $(v, \star)$ using the {Bucketing-Generator}
     \item Sample $(w, \star)$ if necessary, where $w$ is neighbor of $v$
     \item Query tree is bounded for $k = \Theta(\Delta\log n)$
 \end{itemize}
+\textbf{Open:} $k = o(\Delta\log n)$
 \end{alertblock}
 
 

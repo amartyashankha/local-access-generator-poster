@@ -1,33 +1,44 @@
-\begin{block}{Trivial Example - Sampling $G(n, p)$}
+\begin{block}{Sampling $G(n, p)$: \textsf{Vertex-Pair} queries}
 
-\textbf{Model:} $N$ vertex undirected graph: edge probability $p$
+%\textbf{Model:} $n$-vertex undirected graph: edge probability $p$
 
-
-\begin{itemize}
-    \item [] \textbf{Query Model:} Given vertices $u, v$, is $(u,v)\in E$?
-    \item Just a collection of $\frac{N(N-1)}{2}$ Bernoulli RVs with bias $p$.
-\end{itemize}
+\textbf{\textsf{Vertex-Pair}}: Given vertices $u, v$, decide whether $(u,v)\in E$.
+%\begin{itemize}
+%    \item [] \textbf{Query Model:} Given vertices $u, v$, is $(u,v)\in E$?
+    %\item 
+    \emph{Trivial}: just a collection of $n \choose 2$ Bernoulli RVs with bias $p$.
+%\end{itemize}
 
 \end{block}
 
-\begin{block}{Find Next-Neighbor (\emph{skip-sampling})}
+\begin{block}{\textsf{Next-Neighbor} queries (skip-sampling)}
 
-\textbf{Adjacency List query:} Return neighbors of $v$ in order.
+\textbf{\textsf{Next-Neighbor}}: Return neighbors of $v$ in order.
+
+\vspace{15pt}
+
+\emph{\color{red}Issue:} Na\"ive sampling spends $1/p$ time sampling the $0$'s
+
+\emph{Idea}: can compute \textsf{Next-Neighbor}'s distribution's CDF from
+\vspace{-10pt}
 \[ \mathbb P[k \textrm{ non-neighbors before next-neighbor}] = p(1-p)^k \]
-\vspace{-3.5ex}
+
+\colorbox{BlueGreen}{\textbf{Skip-sampling}} Draw from \textsf{Next-Neighbor} distribution
+\vspace{-20pt}
 \begin{itemize}
     \item Can sample from this distribution in $\tilde{\mathcal O}(1)$ time [ELMR17]
-    \item Avoid sampling each $0$ separately
-    \item [] \textbf{Issue:} Adjacency matrix is symmetric
-          So, each zero must also appear in the corresponding column of $v$
+    \item Further analysis required for finite-precision arithmetic
+%    \item Na\"ive sampling spends $1/p$ time sampling the $0$'s
 \end{itemize}
+
+\emph{\color{red}Issue:} Adjacency matrix is symmetric; we need to \textbf{record all generated $0$'s} in the corresponding column of $v$
 
 \begin{figure}[h!]\centering
     \def\svgwidth{0.9\columnwidth}
     \import{svg/}{skip_sampling.pdf_tex}
 \end{figure}
-If the sampled neighbor is a $0$, discard and resample.
+\emph{\color{red}Issue:} if the sampled neighbor is already $0$, must re-sample
 
-\textbf{Cannot afford too many re-samplings.}
+\quad$\Rightarrow$ may hit $0$'s many times -- \textbf{too many re-samplings}
 
 \end{block}
