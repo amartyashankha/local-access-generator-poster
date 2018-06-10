@@ -54,12 +54,6 @@
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{skip_sampling.pdf}}%
-    \put(0.02472711,0.16934031){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
-    \put(0.08927388,0.16934031){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
-    \put(0.35638351,0.16934031){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
-    \put(0.15761747,0.16934031){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
-    \put(0.22273375,0.16934031){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
-    \put(0.28917894,0.16934031){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
     \put(0.4241576,0.16934031){\color[rgb]{0,0,0}\transparent{0.597}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}?\end{tabular}}}}%
     \put(0.49193168,0.16934031){\color[rgb]{0,0,0}\transparent{0.597}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}?\end{tabular}}}}%
     \put(0.55704796,0.16934031){\color[rgb]{0,0,0}\transparent{0.597}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}?\end{tabular}}}}%
@@ -67,30 +61,14 @@
     \put(0.75771241,0.16934031){\color[rgb]{0,0,0}\transparent{0.597}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}?\end{tabular}}}}%
     \put(0.89060278,0.16934031){\color[rgb]{0,0,0}\transparent{0.597}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}?\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{skip_sampling.pdf}}%
-    \put(0.02472711,0.03910775){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
-    \put(0.08927388,0.03910775){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
-    \put(0.35638351,0.03910775){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
-    \put(0.15761747,0.03910775){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
-    \put(0.22273375,0.03910775){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
-    \put(0.28917894,0.03910775){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
     \put(0.75771241,0.03910775){\color[rgb]{0,0,0}\transparent{0.597}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}?\end{tabular}}}}%
     \put(0.89060278,0.03910775){\color[rgb]{0,0,0}\transparent{0.597}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}?\end{tabular}}}}%
-    \put(0.68860942,0.03910775){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
-    \put(0.48984339,0.03910775){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
-    \put(0.55495967,0.03910775){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
-    \put(0.4220693,0.03910775){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{skip_sampling.pdf}}%
-    \put(0.95397459,0.16934031){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=4]{skip_sampling.pdf}}%
-    \put(0.95397459,0.03910775){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=5]{skip_sampling.pdf}}%
-    \put(0.62098928,0.03910775){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=6]{skip_sampling.pdf}}%
-    \put(0.62098928,0.16934031){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=7]{skip_sampling.pdf}}%
-    \put(0.82032483,0.03910775){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=8]{skip_sampling.pdf}}%
-    \put(0.82032483,0.16934031){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=9]{skip_sampling.pdf}}%
   \end{picture}%
 \endgroup%
