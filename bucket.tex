@@ -1,10 +1,10 @@
 \begin{block}{\textsf{Random-Neighbor} queries (\textsc{Bucketing-Generator})}
-\textbf{\textsf{Random-Neighbor}}: Return a neighbor of $v$ uniformly at random.
+\textbf{\textsf{Random-Neighbor:}} Return a neighbor of $v$ uniformly at random.
 
 \vspace{15pt}
 \emph{\color{red}Issue:} \textsf{next-neighbor} can't jump to a random potential neighbor of $v$
 
-\colorbox{BlueGreen}{\textbf{Bucketing}} Divide each row of the adjacency matrix into contiguous buckets
+\colorbox{BlueGreen}{\textbf{Bucketing:}} Divide each row of the adjacency matrix into contiguous buckets
 
 \quad$\Rightarrow$ random neighbor of $v\approx$ random neighbor in a random bucket of $v$
 
@@ -12,7 +12,7 @@
 
 \emph{\color{red}Issue:} do \textbf{not} know $\deg(v)$; must return each neighbor with probability $1/\deg(v)$
 
-\colorbox{BlueGreen}{\textbf{Rejection Sampling}} Return \textbf{any} neighbor with the \textbf{same} probability 
+\colorbox{BlueGreen}{\textbf{Rejection Sampling:}} Return \textbf{any} neighbor with the \textbf{same} probability 
 
 \begin{figure}[h]
     \centering
@@ -26,7 +26,7 @@ $\mathbb P[\textrm{return }u] = {\color{red}\frac{1}{\#\textrm{buckets}}} \times
 $\displaystyle\mathbb P[\textrm{return any neighbor}] \approx \Omega(1/\log n) \Rightarrow$ $\mathcal{O}(\log n)$ iterations suffice
 
 \vspace{15pt}
-\colorbox{BlueGreen}{\textbf{Data Structure}} bucket maintains its known neighbors and a \textbf{filled} marker
+\colorbox{BlueGreen}{\textbf{Data Structure:}} bucket maintains its known neighbors and a \textbf{filled} marker
 \vspace{-8pt}
 \[
   \begin{array}{l}

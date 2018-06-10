@@ -17,13 +17,14 @@
 
 \vspace{15pt}
 
-\emph{\color{red}Issue:} Na\"ive sampling spends $1/p$ time sampling the $0$'s
+
+\colorbox{BlueGreen}{\textbf{Na\"ive solution:}} Toss $1/p$ coins until a neighbor is found.
 
 \emph{Idea}: can compute \textsf{Next-Neighbor}'s distribution's CDF from
 \vspace{-10pt}
 \[ \mathbb P[k \textrm{ non-neighbors before next-neighbor}] = p(1-p)^k \]
 
-\colorbox{BlueGreen}{\textbf{Skip-sampling}} Draw from \textsf{Next-Neighbor} distribution
+\colorbox{BlueGreen}{\textbf{Skip-sampling:}} Draw from \textsf{Next-Neighbor} distribution
 \vspace{-20pt}
 \begin{itemize}
     \item Can sample from this distribution in $\tilde{\mathcal O}(1)$ time [ELMR17]
