@@ -4,29 +4,30 @@
 \vspace{15pt}
 \emph{\color{red}Issue:} \textsf{next-neighbor} can't jump to a random potential neighbor of $v$
 
-\colorbox{BlueGreen}{\textbf{Bucketing:}} Divide each row of the adjacency matrix into contiguous buckets
+\colorbox{TealBlue}{\textbf{Bucketing:}} Divide each row of the adjacency matrix into contiguous buckets
 
 \quad$\Rightarrow$ random neighbor of $v\approx$ random neighbor in a random bucket of $v$
 
 \vspace{15pt}
 
-\emph{\color{red}Issue:} do \textbf{not} know $\deg(v)$; must return each neighbor with probability $1/\deg(v)$
+\emph{\color{red}Issue:} do \textbf{not} know $\deg(v)$; must return each neighbor with probability $\frac{1}{\deg(v)}$
 
-\colorbox{BlueGreen}{\textbf{Rejection Sampling:}} Return \textbf{any} neighbor with the \textbf{same} probability 
+\colorbox{TealBlue}{\textbf{Rejection Sampling:}} Return \textbf{any} neighbor with the \textbf{same} probability 
 
+\vspace{-0.5in}
 \begin{figure}[h]
     \centering
-\includegraphics[clip, width=0.95\textwidth]{bckt.pdf}
+    \fcolorbox{TealBlue}{white}{\includegraphics[clip, width=\textwidth]{svg/fig1.pdf}}
 \end{figure}
 
 $\mathbb P[\textrm{return }u] = {\color{red}\frac{1}{\#\textrm{buckets}}} \times {\color{Emerald}\frac{1}{\#\textrm{neighbors in bucket}}} \times {\color{blue}\frac{\#\textrm{neighbors in bucket}}{\mathcal{O}(\log n)}}\approx\frac{\Omega(1/\log n)}{\#\textrm{neighbors of }v}$
 
-\vspace{5pt}
+\vspace{10pt}
 
 $\displaystyle\mathbb P[\textrm{return any neighbor}] \approx \Omega(1/\log n) \Rightarrow$ $\mathcal{O}(\log n)$ iterations suffice
 
 \vspace{15pt}
-\colorbox{BlueGreen}{\textbf{Data Structure:}} bucket maintains its known neighbors and a \textbf{filled} marker
+\colorbox{TealBlue}{\textbf{Data Structure:}} bucket maintains its known neighbors and a \textbf{filled} marker
 \vspace{-8pt}
 \[
   \begin{array}{l}
@@ -62,7 +63,7 @@ $\displaystyle\mathbb P[\textrm{return any neighbor}] \approx \Omega(1/\log n) \
 %\end{alertblock}
 
 \end{block}
-
+\vspace{-0.5in}
 
 
 %\vspace{-0.5in}
